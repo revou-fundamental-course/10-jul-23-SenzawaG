@@ -1,0 +1,343 @@
+body {
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+  font-family: "Poppins", sans-serif;
+}
+
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes join {
+  0% {
+    opacity: 0;
+    translate: -50px 0;
+  }
+  100% {
+    opacity: 1;
+    translate: 0;
+  }
+}
+header {
+  position: fixed;
+  height: 100px;
+  width: 100vw;
+  z-index: 10;
+  transition: 1s;
+}
+header svg {
+  font-family: "Poppins", sans-serif;
+  width: 100%;
+  height: 100%;
+}
+header svg text {
+  animation: join 2s;
+  fill: #383fa1;
+  font-size: 40px;
+  font-weight: bold;
+}
+
+section#welcome {
+  z-index: 1;
+  width: 100vw;
+  height: 100vh;
+  padding: 0 100px;
+  transition: all 1s cubic-bezier(0.96, -0.08, 0.34, 0.74);
+  background-image: url(/utils/back.png);
+  background-size: 100vh;
+  background-position-x: right;
+  background-repeat: no-repeat;
+}
+section#welcome #text {
+  display: grid;
+  place-content: center;
+  width: 50vw;
+  height: 100vh;
+  color: rgb(90, 90, 90);
+}
+section#welcome .title {
+  font-size: 80px;
+  font-weight: bold;
+  color: #383fa1;
+  text-shadow: 1px 1px rgba(0, 0, 0, 0.2);
+  animation: join 1s;
+}
+section#welcome .sub {
+  animation: join 1.5s;
+}
+section#welcome .direct {
+  margin-top: 20px;
+  animation: join 2s;
+}
+section#welcome .expand button {
+  cursor: pointer;
+  margin-top: 20px;
+  color: rgb(90, 90, 90);
+  border: solid 1px #383fa1;
+  border-radius: 20px;
+  padding: 8px 15px;
+  background-color: transparent;
+  transition: 0.2s;
+}
+section#welcome .expand button:hover {
+  background-color: #383fa1;
+  color: white;
+}
+
+main {
+  position: absolute;
+  background-color: rgb(248, 248, 248);
+  transition: all 1s cubic-bezier(0.64, 0, 0.32, 1);
+  height: calc(100vh - 100px);
+  max-width: 100vw;
+  min-width: 100vw;
+  box-sizing: border-box;
+  padding: 30px 50px;
+  display: flex;
+}
+main section {
+  padding: 20px;
+  width: 50%;
+}
+main .fi {
+  display: inline-block;
+  translate: 0 2px;
+  color: #2067d1;
+}
+
+#cal legend {
+  font-size: 18px;
+  color: #383fa1;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+#cal fieldset {
+  background-color: white;
+  border-color: rgba(56, 63, 161, 0.1882352941);
+  border-radius: 10px;
+  padding: 30px;
+}
+#cal fieldset .fi {
+  color: black;
+}
+#cal fieldset .data {
+  margin-bottom: 30px;
+}
+#cal fieldset .title {
+  margin: 5px;
+  font-weight: bold;
+}
+#cal fieldset .title:first-child {
+  margin-bottom: 10px;
+}
+#cal fieldset .gender {
+  display: inline-block;
+  margin-right: 15px;
+}
+#cal fieldset label {
+  display: inline-block;
+  translate: 0 -2px;
+}
+#cal fieldset input[type=number] {
+  outline: 0;
+  width: 90%;
+  font-size: 16px;
+  padding: 2px 5px;
+  border: 1px rgba(0, 0, 0, 0.6);
+  font-family: "Poppins", sans-serif;
+  border-style: none none solid none;
+}
+#cal fieldset input[type=number]::-moz-placeholder {
+  color: rgb(173, 173, 173);
+}
+#cal fieldset input[type=number]::placeholder {
+  color: rgb(173, 173, 173);
+}
+#cal fieldset button {
+  margin-right: 5px;
+}
+#cal fieldset #start {
+  cursor: pointer;
+  color: rgb(90, 90, 90);
+  background-color: #3c46d3;
+  border: none;
+  color: white;
+  border-radius: 5px;
+  padding: 8px 15px;
+  transition: 0.2s;
+}
+#cal fieldset #start:hover {
+  background-color: #383fa1;
+}
+#cal fieldset #reset {
+  cursor: pointer;
+  color: rgb(90, 90, 90);
+  border: solid 1px #ea3642;
+  background-color: transparent;
+  border-radius: 5px;
+  padding: 8px 15px;
+  transition: 0.2s;
+}
+#cal fieldset #reset:hover {
+  color: white;
+  background-color: #ea3642;
+}
+
+#tmp {
+  margin-top: 15px;
+}
+#tmp p {
+  color: rgb(55, 55, 55);
+  margin: 5px 3px;
+  text-align: justify;
+  text-indent: 35px;
+}
+#tmp ul {
+  margin: 5px 0;
+}
+#tmp .text {
+  border-top: 1px solid rgba(0, 0, 0, 0.2);
+  margin-bottom: 10px;
+  padding: 10px;
+}
+#tmp .title {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+#res {
+  right: 0;
+  padding: 0;
+  transition: 0.5s;
+  translate: 100% 0;
+  position: absolute;
+  box-sizing: border-box;
+  background-color: white;
+  height: calc(100vh - 200px);
+  border-radius: 10px 0 0 10px;
+  border: solid 1px rgba(56, 63, 161, 0.1882352941);
+  box-shadow: 0 0 5px rgba(56, 63, 161, 0.1882352941);
+}
+#res .preload {
+  border-radius: 10px 0 0 10px;
+}
+#res .box {
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  padding: 30px;
+  box-sizing: inherit;
+}
+#res .result {
+  font-size: 18px;
+  text-align: center;
+  padding-bottom: 30px;
+  border-bottom: dashed 1px rgba(0, 0, 0, 0.3);
+}
+#res .result .head {
+  color: rgb(102, 102, 102);
+  font-size: 16px;
+}
+#res .result .bot {
+  font-size: 16px;
+}
+#res .result #num {
+  color: #59e023;
+  color: #e2c000;
+  color: #dd2a36;
+  margin: 20px 0;
+  font-size: 36px;
+}
+#res #content {
+  display: flex;
+  border-bottom: dashed 1px rgba(0, 0, 0, 0.2);
+}
+#res #content .out {
+  padding-right: 20px;
+  width: 50%;
+  border-right: solid 1px rgba(0, 0, 0, 0.2);
+}
+#res #content .out .title {
+  font-size: 18px;
+  font-weight: bold;
+}
+#res #content .out .comp {
+  font-size: 14px;
+}
+#res #content .msg {
+  padding-left: 20px;
+  width: 50%;
+}
+#res #content .msg p {
+  font-size: 14px;
+  text-align: justify;
+}
+#res #promote {
+  margin-top: 10px;
+  text-align: center;
+}
+#res #promote .disc {
+  width: 80%;
+  display: inline-block;
+}
+#res #promote .disc p {
+  font-size: 14px;
+}
+#res #promote button {
+  border: solid 1px #383fa1;
+  border-radius: 5px;
+  padding: 8px 15px;
+  transition: 0.2s;
+}
+#res #promote #consult {
+  cursor: pointer;
+  color: white;
+  background-color: #383fa1;
+}
+#res #promote #consult:hover {
+  background-color: #222885;
+}
+#res #promote #regist {
+  cursor: pointer;
+  color: rgb(90, 90, 90);
+  background-color: transparent;
+}
+#res #promote #regist:hover {
+  color: white;
+  background-color: #383fa1;
+}
+#res .info p {
+  font-size: 14px;
+}
+
+.preload {
+  background-color: white;
+  width: 100%;
+  height: 100%;
+  transition: 0.3s;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loader {
+  display: block;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 8px solid;
+  border-color: #383fa1 rgba(0, 0, 0, 0);
+  animation: s1 1s infinite;
+}
+
+@keyframes s1 {
+  to {
+    transform: rotate(0.5turn);
+  }
+}/*# sourceMappingURL=style.css.map */
