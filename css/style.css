@@ -48,7 +48,7 @@ section#welcome {
   height: 100vh;
   padding: 0 100px;
   transition: all 1s cubic-bezier(0.96, -0.08, 0.34, 0.74);
-  background-image: url(/img/back.png);
+  background-image: url(../img/back.png);
   background-size: 100vh;
   background-position-x: right;
   background-repeat: no-repeat;
