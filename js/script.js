@@ -33,5 +33,6 @@ $('#reset').addEventListener('click', async () => {
 
 $('header').addEventListener('click', () => {
   $('#welcome').removeAttribute('style');
+  $('header').removeAttribute('style');
   $('main').removeAttribute('style');
 })
