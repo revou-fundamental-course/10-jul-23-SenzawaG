@@ -363,14 +363,4 @@ header {
 
 main {
   background-color: white;
-}
-
-#res {
-  translate: 0;
-}
-#res .preload {
-  display: none;
-}
-#res .box {
-  transition: 0.1s;
 }/*# sourceMappingURL=style.css.map */
