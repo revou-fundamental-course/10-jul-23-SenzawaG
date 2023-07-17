@@ -249,7 +249,7 @@ main .fi {
   color: #e2c000;
   color: #dd2a36;
   margin: 20px 0;
-  font-size: 36px;
+  font-size: 42px;
   font-weight: bold;
 }
 #res #content {
@@ -355,4 +355,14 @@ header {
 
 main {
   background-color: white;
+}
+
+#res {
+  translate: 0;
+}
+#res .preload {
+  transition: 0.1s;
+}
+#res .box {
+  transition: 0.1s;
 }/*# sourceMappingURL=style.css.map */
