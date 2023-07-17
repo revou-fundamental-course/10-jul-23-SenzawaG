@@ -111,7 +111,7 @@ $('#start').addEventListener('click', () => {
 
     /////
     // Qualify age, if true => Calculate
-    if (age >= valid.age && hei < valid.height && wei < valid.weight && checkup) {res = wei/(hei*hei); expandRes(); await delay(1000)}
+    if (age >= valid.age && hei >= (valid.height/100) && wei >= valid.weight && checkup) {res = wei/(hei*hei); expandRes(); await delay(1000)}
     else res = 0;
 
     /////
