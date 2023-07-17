@@ -48,11 +48,11 @@
             Jenis Kelamin <i class="fi fi-rr-venus-mars"></i>
           </div>
           <div class="gender">
-            <input type="radio" id="g-pria" name="gender">
+            <input type="radio" class="radio" id="g-pria" name="gender">
             <label for="gender">Pria</label>
           </div>
           <div class="gender">
-            <input type="radio" id="g-wanita" name="gender">
+            <input type="radio" class="radio" id="g-wanita" name="gender">
             <label for="gender">Wanita</label>
           </div>
         </div>
@@ -61,21 +61,21 @@
           <div class="title">
             <i class="fi fi-rr-scale"></i> Berat Badan (kg)
           </div>
-          <input type="number" id="weight" name="weight" placeholder="cth: 68" value="142">
+          <input type="number" id="weight" name="weight" placeholder="min: 10" min="10" class="number">
         </div>
 
         <div class="data" id="ages">
           <div class="title">
             <i class="fi fi-rr-star"></i> Usia (tahun)
           </div>
-          <input type="number" id="age" name="age" placeholder="cth: 32"value="18">
+          <input type="number" id="age" name="age" placeholder="min: 18" min="18" class="number">
         </div>
 
         <div class="data" id="heights">
           <div class="title">
             <i class="fi fi-rr-ruler-combined"></i> Tinggi Badan (cm)
           </div>
-          <input type="number" id="height" name="height" placeholder="cth: 175"value="180">
+          <input type="number" id="height" name="height" placeholder="min: 50" min="50" class="number">
         </div>
 
         <div id="action">
@@ -117,24 +117,24 @@
       <div class="box">
         <div class="result">
           <div class="top">
-            <span id="sum-head">Hasil BMI Anda: </span>
+            <span id="sum-head"></span>
             <br>
-            <span id="sum-info">Berlebih</span>
+            <span id="sum-info"></span>
           </div>
 
           <div id="num">
-            <span id="sum-nums">24 </span>
-            <span id="sum-cats">Kg</span>
+            <span id="sum-nums"></span>
+            <span id="sum-cats"></span>
           </div>
 
           <div id="sum">
-            <span id="sum-sums">Hasil BMI di atas</span>
+            <span id="sum-sums"></span>
           </div>
 
           <div class="bot">
-            <span id="sum-type">dari berat yang seharusnya </span>
-            <span id="sum-avgs">60 </span>
-            <span id="sum-unit">Kg</span>
+            <span id="sum-type"></span>
+            <span id="sum-avgs"></span>
+            <span id="sum-unit"></span>
           </div>
         </div>
 

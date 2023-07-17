@@ -132,12 +132,13 @@ main .fi {
   margin: 5px;
   font-weight: bold;
 }
-#cal fieldset .title:first-child {
-  margin-bottom: 10px;
-}
 #cal fieldset .gender {
+  border: solid 1px transparent;
   display: inline-block;
   margin-right: 15px;
+  padding-right: 5px;
+  padding-top: 3px;
+  border-radius: 10px;
 }
 #cal fieldset label {
   display: inline-block;
@@ -348,19 +349,4 @@ main .fi {
   to {
     transform: rotate(0.5turn);
   }
-}
-#welcome {
-  translate: 100vw 0;
-}
-
-main {
-  translate: 0 calc((100vh - 100px) * -1);
-}
-
-header {
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-}
-
-main {
-  background-color: white;
 }/*# sourceMappingURL=style.css.map */
