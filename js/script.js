@@ -49,8 +49,8 @@ number.forEach((input,i) => {
   input.addEventListener('input', () => {
     input.removeAttribute('style');
     if (!input.value) input.style.borderColor = 'red';
-    if (i == 0 && input.value < valid.age) input.style.borderColor = 'red';
-    if (i == 1 && input.value < valid.weight) input.style.borderColor = 'red';
+    if (i == 0 && input.value < valid.weight) input.style.borderColor = 'red';
+    if (i == 1 && input.value < valid.age) input.style.borderColor = 'red';
     if (i == 2 && input.value < valid.height) input.style.borderColor = 'red';
   })
 })
@@ -123,7 +123,8 @@ $('#start').addEventListener('click', () => {
           sum_sums = $('#sum-sums'),
           sum_cats = $('#sum-cats'),
           sum_type = $('#sum-type'),
-          sum_avgs = $('#sum-avgs')
+          sum_avgs = $('#sum-avgs'),
+          sum_main = $('#num');
     
     /////
     // Start Calculation
@@ -149,30 +150,35 @@ $('#start').addEventListener('click', () => {
         stat.type = 'Anda memiliki berat badan yang <br> kurang dari seharusnya ';
         stat.sums = 'Hasil BMI di bawah normal';
         stat.avgs = BMI.min;
+        sum_main.style.color = 'red'
       }
       else if (res > BMI.n_min && res <= BMI.n_max) {
         stat.info = 'Normal';
         stat.type = 'Pertahankan berat badan <br> Anda di';
         stat.sums = 'Hasil BMI Ideal';
         stat.avgs = `${BMI.min} - ${BMI.max}`;
+        sum_main.style.color = 'green'
       }
       else if (res > BMI.n_max && res <= BMI.o_min) {
         stat.info = 'Berat Badan Berlebih';
         stat.type = 'Berat badan Anda lebih dari berat <br> badan yang seharusnya';
         stat.sums = 'Hasil BMI di atas normal';
         stat.avgs = BMI.max;
+        sum_main.style.color = 'orange'
       }
       else if (res > BMI.o_min && res <= BMI.o_max) {
         stat.info = 'Obesitas';
         stat.type = 'Berat badan Anda jauh lebih berat <br> dari yang seharusnya';
         stat.sums = 'Hasil BMI jauh di atas normal';
         stat.avgs = BMI.max;
+        sum_main.style.color = 'red'
       }
       else if (res > BMI.o_max) {
         stat.info = 'Obesitas Tinggi';
         stat.type = 'Kami sarankan agar Anda menurunkan <br> berat badan setidaknya hingga';
         stat.sums = 'Hasil BMI sangat jauh di atas normal';
         stat.avgs = Math.floor(BMI.max*1.2*10)/10;
+        sum_main.style.color = 'red'
       }
 
       ///////
