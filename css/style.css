@@ -252,8 +252,12 @@ main .fi {
   font-size: 42px;
   font-weight: bold;
 }
+#res .result #sum {
+  color: rgb(102, 102, 102);
+  font-size: 14px;
+  padding-bottom: 5px;
+}
 #res #promote {
-  margin-top: 10px;
   text-align: center;
 }
 #res #promote .disc {
@@ -286,8 +290,36 @@ main .fi {
   color: white;
   background-color: #383fa1;
 }
+#res #schema {
+  border-bottom: dashed 1px rgba(0, 0, 0, 0.2);
+  padding: 10px 0;
+  display: flex;
+  align-items: center;
+}
+#res .bmis {
+  width: 40%;
+  font-size: 14px;
+  padding-left: 10px;
+  padding-right: 20px;
+}
+#res .bmis .inner {
+  justify-content: space-between;
+  height: 100%;
+  display: flex;
+}
+#res .bmis .scores {
+  text-align: right;
+}
+#res .info {
+  text-align: justify;
+  width: 60%;
+  padding-right: 10px;
+  padding-left: 20px;
+  border-left: dashed 1px rgba(0, 0, 0, 0.2);
+}
 #res .info p {
   font-size: 14px;
+  margin: 5px 0;
 }
 
 .preload {

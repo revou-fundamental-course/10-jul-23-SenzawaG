@@ -61,7 +61,7 @@
           <div class="title">
             <i class="fi fi-rr-scale"></i> Berat Badan (kg)
           </div>
-          <input type="number" id="weight" name="weight" placeholder="cth: 68" value="132">
+          <input type="number" id="weight" name="weight" placeholder="cth: 68" value="142">
         </div>
 
         <div class="data" id="ages">
@@ -127,6 +127,10 @@
             <span id="sum-cats">Kg</span>
           </div>
 
+          <div id="sum">
+            <span id="sum-sums">Hasil BMI di atas</span>
+          </div>
+
           <div class="bot">
             <span id="sum-type">dari berat yang seharusnya </span>
             <span id="sum-avgs">60 </span>
@@ -134,24 +138,52 @@
           </div>
         </div>
 
+        <div id="schema">
+          <div class="bmis">
+            <div class="inner">
+              <div class="cats">
+                <div class="cat" id="underweight">Underweight</div>
+                <div class="cat" id="normal">Normal</div>
+                <div class="cat" id="overweight">Overweight</div>
+                <div class="cat" id="obesitas">Obesitas</div>
+                <div class="cat" id="obesitash">Obesitas Tinggi</div>
+              </div>
+              <div class="scores">
+                <div class="cat" id="underweight_">
+                  &lt; 18.4</div>
+                <div class="cat" id="normal_">
+                  19 &gt; - &lt; 24.9
+                </div>
+                <div class="cat" id="overweight_">
+                  25 &gt; - &lt; 29.9
+                </div>
+                <div class="cat" id="obesitas_">
+                  30 &gt; - &lt; 34.9
+                </div>
+                <div class="cat" id="obesitash_">
+                  &gt; 35.0
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="info">
+            <div class="title">
+              <i class="fi fi-rr-info"></i> - Prinsip Kerja
+            </div>
+            <p>
+              Indeks Massa Tubuh / Body Mass Index (BMI) yang dihitung sebagai berat badan Anda (Kg) dibagi dengan kuadrat tinggi badan Anda (M).
+            </p>
+          </div>
+        </div>
+
         <div id="promote">
           <div class="disc">
-            <p>BMI tidak sepenuhnya mewakili keseluruhan diagnosis kesehatan tubuh dan resiko penyakit seseorang. Anda perlu melakukan konsultasi lebih lanjut mengenai resiko dan kekhawatiran Anda terkait dengan berat badan Anda.</p>
+            <p>BMI tidak sepenuhnya mewakili keseluruhan diagnosis kesehatan tubuh dan resiko penyakit seseorang. Anda perlu berkonsultasi dengan pihak profesional mengenai resiko dan kekhawatiran Anda terkait dengan berat badan Anda.</p>
           </div>
           <button id="consult">Konsultasi Dokter Via Aplikasi</button>
           <button id="regist">Registrasi Sekarang</button>
         </div>
       </div>
-
-      <!-- <div class="info">
-        <div class="title">
-          <i class="fi fi-rr-info"></i> - Prinsip Kerja
-        </div>
-        <p>
-          Kalkulator akan memberikan Anda gambaran tentang perbandingan berat badan Anda dengan nilai umum. Indeks Massa Tubuh / Body Mass Index (BMI) dihitung sebagai berat badan Anda (Kg) dibagi dengan kuadrat tinggi badan Anda (M).
-        </p>
-        <p>[ BMI = Kg/M2 ]</p>
-      </div> -->
     </section>
   </main>
 
