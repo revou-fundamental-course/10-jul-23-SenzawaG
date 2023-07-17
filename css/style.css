@@ -250,6 +250,7 @@ main .fi {
   color: #dd2a36;
   margin: 20px 0;
   font-size: 36px;
+  font-weight: bold;
 }
 #res #content {
   display: flex;
