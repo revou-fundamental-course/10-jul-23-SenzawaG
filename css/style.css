@@ -52,14 +52,16 @@ section#welcome {
   padding: 0 100px;
   transition: all 1s cubic-bezier(0.96, -0.08, 0.34, 0.74);
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 992px) {
   section#welcome {
     background-image: url(../img/back768.png);
+    background-size: calc(200vh - 100px);
   }
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 992px) {
   section#welcome {
     background-image: url(../img/back.png);
+    background-size: 100vh;
   }
 }
 section#welcome #text {
