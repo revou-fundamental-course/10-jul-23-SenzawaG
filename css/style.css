@@ -43,15 +43,24 @@ header svg text {
 }
 
 section#welcome {
+  background-size: 100vh;
+  background-position-x: right;
+  background-repeat: no-repeat;
   z-index: 1;
   width: 100vw;
   height: 100vh;
   padding: 0 100px;
   transition: all 1s cubic-bezier(0.96, -0.08, 0.34, 0.74);
-  background-image: url(../img/back.png);
-  background-size: 100vh;
-  background-position-x: right;
-  background-repeat: no-repeat;
+}
+@media screen and (max-width: 768px) {
+  section#welcome {
+    background-image: url(../img/back768.png);
+  }
+}
+@media screen and (min-width: 768px) {
+  section#welcome {
+    background-image: url(../img/back.png);
+  }
 }
 section#welcome #text {
   display: grid;
@@ -66,6 +75,12 @@ section#welcome .title {
   color: #383fa1;
   text-shadow: 1px 1px rgba(0, 0, 0, 0.2);
   animation: join 1s;
+}
+@media screen and (max-width: 768px) {
+  section#welcome .title {
+    line-height: 1;
+    margin-bottom: 10px;
+  }
 }
 section#welcome .sub {
   animation: join 1.5s;
@@ -94,15 +109,39 @@ main {
   background-color: rgb(248, 248, 248);
   transition: all 1s cubic-bezier(0.64, 0, 0.32, 1);
   height: calc(100vh - 100px);
+  box-sizing: border-box;
   max-width: 100vw;
   min-width: 100vw;
-  box-sizing: border-box;
-  padding: 30px 50px;
   display: flex;
+}
+@media screen and (min-width: 768px) {
+  main {
+    padding: 30px 50px;
+  }
+}
+@media screen and (max-width: 768px) {
+  main {
+    flex-direction: column;
+    padding: 30px 20px;
+    overflow-y: scroll;
+  }
+  main #res {
+    order: 3;
+  }
+  main #cal {
+    order: 2;
+  }
+  main #tmp {
+    order: 1;
+  }
 }
 main section {
   padding: 20px;
-  width: 50%;
+}
+@media screen and (min-width: 768px) {
+  main section {
+    width: 50%;
+  }
 }
 main .fi {
   display: inline-block;
@@ -189,8 +228,15 @@ main .fi {
   background-color: #ea3642;
 }
 
-#tmp {
-  margin-top: 15px;
+@media screen and (min-width: 768px) {
+  #tmp {
+    margin-top: 15px;
+  }
+}
+@media screen and (max-width: 768px) {
+  #tmp {
+    margin-top: 0;
+  }
 }
 #tmp p {
   color: rgb(55, 55, 55);
@@ -212,17 +258,27 @@ main .fi {
 }
 
 #res {
-  right: 0;
-  padding: 0;
   transition: 0.5s;
-  translate: 100% 0;
-  position: absolute;
   box-sizing: border-box;
   background-color: white;
-  height: calc(100vh - 200px);
-  border-radius: 10px 0 0 10px;
   border: solid 1px rgba(56, 63, 161, 0.1882352941);
   box-shadow: 0 0 5px rgba(56, 63, 161, 0.1882352941);
+  padding: 0;
+}
+@media screen and (min-width: 768px) {
+  #res {
+    right: 0;
+    translate: 100% 0;
+    position: absolute;
+    height: calc(100vh - 200px);
+    border-radius: 10px 0 0 10px;
+  }
+}
+@media screen and (max-width: 768px) {
+  #res {
+    border-radius: 10px;
+    display: none;
+  }
 }
 #res .box {
   opacity: 0;
@@ -258,12 +314,84 @@ main .fi {
   font-size: 14px;
   padding-bottom: 5px;
 }
+#res #schema {
+  border-bottom: dashed 1px rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+}
+@media screen and (max-width: 768px) {
+  #res #schema {
+    flex-direction: column;
+  }
+}
+@media screen and (min-width: 768px) {
+  #res #schema {
+    width: 100%;
+    padding: 10px 0;
+  }
+}
+#res .bmis {
+  font-size: 14px;
+}
+@media screen and (min-width: 768px) {
+  #res .bmis {
+    width: 40%;
+    padding-right: 20px;
+    padding-left: 10px;
+  }
+}
+@media screen and (max-width: 768px) {
+  #res .bmis {
+    width: 100%;
+    padding: 10px;
+  }
+}
+#res .bmis .inner {
+  justify-content: space-between;
+  height: 100%;
+  display: flex;
+}
+#res .bmis .scores {
+  text-align: right;
+}
+#res .info {
+  text-align: justify;
+}
+@media screen and (min-width: 768px) {
+  #res .info {
+    width: 60%;
+    padding-left: 20px;
+    padding-right: 10px;
+    border-left: dashed 1px rgba(0, 0, 0, 0.2);
+  }
+}
+@media screen and (max-width: 768px) {
+  #res .info {
+    width: 100%;
+    padding: 10px;
+    border-top: dashed 1px rgba(0, 0, 0, 0.2);
+  }
+}
+#res .info p {
+  font-size: 14px;
+  margin: 5px 0;
+}
 #res #promote {
   text-align: center;
 }
 #res #promote .disc {
-  width: 80%;
   display: inline-block;
+}
+@media screen and (max-width: 768px) {
+  #res #promote .disc {
+    width: 100%;
+    text-align: justify;
+  }
+}
+@media screen and (min-width: 768px) {
+  #res #promote .disc {
+    width: 80%;
+  }
 }
 #res #promote .disc p {
   font-size: 14px;
@@ -289,38 +417,7 @@ main .fi {
 }
 #res #promote #regist:hover {
   color: white;
-  background-color: #383fa1;
-}
-#res #schema {
-  border-bottom: dashed 1px rgba(0, 0, 0, 0.2);
-  padding: 10px 0;
-  display: flex;
-  align-items: center;
-}
-#res .bmis {
-  width: 40%;
-  font-size: 14px;
-  padding-left: 10px;
-  padding-right: 20px;
-}
-#res .bmis .inner {
-  justify-content: space-between;
-  height: 100%;
-  display: flex;
-}
-#res .bmis .scores {
-  text-align: right;
-}
-#res .info {
-  text-align: justify;
-  width: 60%;
-  padding-right: 10px;
-  padding-left: 20px;
-  border-left: dashed 1px rgba(0, 0, 0, 0.2);
-}
-#res .info p {
-  font-size: 14px;
-  margin: 5px 0;
+  background-color: #222885;
 }
 
 .preload {
@@ -332,7 +429,16 @@ main .fi {
   align-items: center;
   justify-content: center;
   background-color: white;
-  border-radius: 10px 0 0 10px;
+}
+@media screen and (min-width: 768px) {
+  .preload {
+    border-radius: 10px 0 0 10px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .preload {
+    border-radius: 10px;
+  }
 }
 
 .loader {

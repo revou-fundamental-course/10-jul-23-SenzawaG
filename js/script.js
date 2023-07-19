@@ -11,6 +11,10 @@ const valid = {
   height: 50,
 }
 
+if(window.innerWidth < 768) {
+  $('text').setAttribute('x','25px')
+}
+
 // Animation for swap -- Welcome => Calculator Page View
 $('#exp').addEventListener('click', async () => {
   $('#welcome').style.translate = '100vw 0';
@@ -58,13 +62,24 @@ number.forEach((input,i) => {
 // Slide-in Animation Init
 const expandRes = async () => {
   const res = $('#res');
+  const pre = $('.preload');
+  res.style.display = 'block';
+  pre.style.display = 'flex';
+
+  await delay(10);
   res.style.translate = '0';
   $$(res,'.box').style.opacity = 0;
   $$(res,'.preload').style.opacity = 1;
+  
+  await delay(10);
+  pre.scrollIntoView();
 
   await delay(3000);
   $$(res,'.preload').style.opacity = 0;
   $$(res,'.box').style.opacity = 1;
+
+  await delay(300);
+  pre.style.display = 'none';
 };
 
 // Calculating Process
