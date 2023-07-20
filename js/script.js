@@ -63,7 +63,7 @@ number.forEach((input,i) => {
 const expandRes = async () => {
   const res = $('#res');
   const pre = $('.preload');
-  if (window.innerWidth < 768) {
+  if (window.innerWidth < 992) {
     res.style.display = 'block';
     pre.style.display = 'flex';
   }
@@ -72,7 +72,7 @@ const expandRes = async () => {
   res.style.translate = '0';
   $$(res,'.box').style.opacity = 0;
   $$(res,'.preload').style.opacity = 1;
-  if (window.innerWidth < 768) {
+  if (window.innerWidth < 992) {
     pre.scrollIntoView();
   }
 
@@ -80,7 +80,7 @@ const expandRes = async () => {
   $$(res,'.preload').style.opacity = 0;
   $$(res,'.box').style.opacity = 1;
 
-  if (window.innerWidth < 768) {
+  if (window.innerWidth < 992) {
     await delay(300);
     pre.style.display = 'none';
   }

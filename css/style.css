@@ -56,62 +56,71 @@ section#welcome {
   height: 100vh;
   transition: all 1s cubic-bezier(0.96, -0.08, 0.34, 0.74);
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 992px) {
   section#welcome {
     background-image: url(../img/back768.png);
   }
 }
-@media screen and (max-width: 997px) {
-  section#welcome {
-    background-image: url(../img/back768.png);
-  }
-}
-@media screen and (min-width: 997px) {
+@media screen and (min-width: 992px) {
   section#welcome {
     background-image: url(../img/back.png);
     padding: 0 100px;
   }
 }
 section#welcome #text {
+  display: grid;
+  place-content: center;
   height: 100vh;
   color: rgb(90, 90, 90);
+}
+@media screen and (min-width: 992px) {
+  section#welcome #text {
+    width: 50vw;
+  }
+}
+@media screen and (max-width: 992px) {
+  section#welcome #text {
+    width: 70vw;
+    padding: 0 30px;
+  }
 }
 @media screen and (max-width: 768px) {
   section#welcome #text {
     box-sizing: border-box;
-    place-content: center;
-    display: grid;
     padding: 0 20px;
     width: 100vw;
   }
 }
-@media screen and (min-width: 768px) {
-  section#welcome #text {
-    width: 50vw;
-    display: grid;
-    place-content: center;
-  }
-}
 section#welcome .title {
+  margin-bottom: 20px;
+  line-height: 1;
   font-weight: bold;
   color: #383fa1;
   text-shadow: 1px 1px rgba(0, 0, 0, 0.2);
   animation: join 1s;
 }
-@media screen and (max-width: 768px) {
-  section#welcome .title {
-    line-height: 1;
-    margin-bottom: 20px;
-    font-size: 40px;
-  }
-}
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 992px) {
   section#welcome .title {
     font-size: 80px;
   }
 }
+@media screen and (max-width: 992px) {
+  section#welcome .title {
+    font-size: 80px;
+  }
+}
+@media screen and (max-width: 768px) {
+  section#welcome .title {
+    font-size: 40px;
+  }
+}
 section#welcome .sub {
   animation: join 1.5s;
+}
+@media screen and (max-width: 992px) {
+  section#welcome .sub {
+    font-size: 18px;
+  }
 }
 @media screen and (max-width: 768px) {
   section#welcome .sub {
@@ -122,6 +131,16 @@ section#welcome .direct {
   margin-top: 20px;
   animation: join 2s;
 }
+@media screen and (max-width: 992px) {
+  section#welcome .direct {
+    font-size: 18px;
+  }
+}
+@media screen and (max-width: 768px) {
+  section#welcome .direct {
+    font-size: 14px;
+  }
+}
 section#welcome .expand button {
   cursor: pointer;
   margin-top: 20px;
@@ -131,6 +150,16 @@ section#welcome .expand button {
   padding: 8px 15px;
   background-color: transparent;
   transition: 0.2s;
+}
+@media screen and (max-width: 992px) {
+  section#welcome .expand button {
+    font-size: 18px;
+  }
+}
+@media screen and (max-width: 768px) {
+  section#welcome .expand button {
+    font-size: 14px;
+  }
 }
 section#welcome .expand button:hover {
   background-color: #383fa1;
@@ -147,12 +176,12 @@ main {
   min-width: 100vw;
   display: flex;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 992px) {
   main {
     padding: 30px 50px;
   }
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 992px) {
   main {
     flex-direction: column;
     padding: 30px 20px;
@@ -171,7 +200,7 @@ main {
 main section {
   padding: 20px;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 992px) {
   main section {
     width: 50%;
   }
@@ -298,7 +327,7 @@ main .fi {
   box-shadow: 0 0 5px rgba(56, 63, 161, 0.1882352941);
   padding: 0;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 992px) {
   #res {
     right: 0;
     translate: 100% 0;
@@ -307,7 +336,7 @@ main .fi {
     border-radius: 10px 0 0 10px;
   }
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 992px) {
   #res {
     border-radius: 10px;
     display: none;
