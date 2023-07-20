@@ -19,7 +19,7 @@ if(window.innerWidth < 768) {
 $('#exp').addEventListener('click', async () => {
   $('#welcome').style.translate = '100vw 0';
   await delay(200);
-  $('main').style.translate = '0 calc((100vh - 100px)*-1)';
+  $('main').style.translate = `0 ${($('#welcome').offsetHeight - 100) * -1}px`;
   $('header').style.boxShadow = '0 0 10px rgba(0,0,0,.2)';
 
   await delay(800);
