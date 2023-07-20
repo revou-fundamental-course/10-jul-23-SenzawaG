@@ -21,6 +21,7 @@ $('#exp').addEventListener('click', async () => {
   await delay(200);
   $('main').style.translate = `0 ${($('#welcome').offsetHeight - 100) * -1}px`;
   $('header').style.boxShadow = '0 0 10px rgba(0,0,0,.2)';
+  $('header').style.backgroundColor = 'white';
 
   await delay(800);
   $('main').style.backgroundColor = 'white';
