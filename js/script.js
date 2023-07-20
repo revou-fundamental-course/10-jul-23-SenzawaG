@@ -23,14 +23,12 @@ const valid = {
 
 // Adjustment of Header
 // -if Mobile View => Move left
-//
 if(window.innerWidth < 768) {
   $('text').setAttribute('x','25px')
 }
 
 // Animation for swap 
 // -Welcome => Calculator Page View
-//
 // Swipe off, then it goes whoop
 $('#exp').addEventListener('click', async () => {
   $('#welcome').style.translate = '100vw 0';
@@ -46,7 +44,6 @@ $('#exp').addEventListener('click', async () => {
 
 // Animation for swap 
 // -Calculator Page View => Welcome
-//
 $('header').addEventListener('click', () => {
   $('#welcome').removeAttribute('style');
   $('header').removeAttribute('style');
@@ -69,7 +66,6 @@ $('#reset').addEventListener('click', async () => {
 // Query all the .number element    
 // Add on-input event for each of them.ne
 // It will triggered if it doesn't meet required value
-
 const number = $_('.number');
 number.forEach((input,i) => {
   input.addEventListener('input', () => {
@@ -89,7 +85,6 @@ number.forEach((input,i) => {
 // Query all the .radio element    
 // Add on-click event for each of them. 
 // It will be all side red border if it was unchecked later
-
 const radios = $_('.radio');
 radios.forEach(radio => { 
   radio.addEventListener('click', () => {
@@ -99,7 +94,6 @@ radios.forEach(radio => {
 
 // Slide-in Animation 
 // -- Result Section of Calculation
-//
 const expandRes = async () => {
   const res = $('#res');
   const pre = $('.preload');
